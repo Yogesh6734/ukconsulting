@@ -5,6 +5,7 @@ import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Instagram, Phone, Mail, MessageCircle, Sun, Moon } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Home = () => {
   const { toast } = useToast();
@@ -16,9 +17,6 @@ const Home = () => {
     message: ''
   });
 
-  // Get API URL from environment variable (production) or use localhost (development)
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -27,32 +25,38 @@ const Home = () => {
     e.preventDefault();
     
     try {
-      // Send data to backend API
-      const response = await fetch(`${API_URL}/api/contact`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      console.log('Response status:', response);
-      const data = await response.json();
+      // Send email using EmailJS (no backend needed)
+      const result = await emailjs.send(
+        'service_fg1ubgu',
+        'template_03siona',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
 
-      if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: data.message || "Thank you for contacting us. We'll get back to you soon.",
-        });
-        setFormData({ name: '', email: '', phone: '', message: '' });
-      } else {
-        toast({
-          title: "Error",
-          description: data.detail || "Failed to send message. Please try again.",
-          variant: "destructive",
-        });
-      }
+Message:
+${formData.message || 'No message provided'}
+          `.trim(),
+          to_email: 'bhati.6734@gmail.com'
+        },
+        '40lFb9qaHJPASYP0d'
+      );
+
+      console.log('Email sent successfully:', result);
+      
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+      
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      
     } catch (error) {
-      console.error('Error sending message:', error);
+      console.error('Error sending email:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again or contact us directly.",
