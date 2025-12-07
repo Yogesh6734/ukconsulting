@@ -42,23 +42,23 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">DN</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-600 to-cyan-800 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-xl">UKC</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">DN Consulting Group</span>
+              <span className="text-xl font-bold text-gray-900">UK Work Connect</span>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-blue-600 transition-colors">Home</button>
-              <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-blue-600 transition-colors">About</button>
-              <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-blue-600 transition-colors">Services</button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-blue-600 transition-colors">Contact</button>
+              <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-teal-600 transition-colors">Home</button>
+              <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-teal-600 transition-colors">About</button>
+              <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-teal-600 transition-colors">Services</button>
+              <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-teal-600 transition-colors">Contact</button>
             </nav>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white">
+      <section id="home" className="pt-24 pb-16 bg-gradient-to-br from-teal-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center py-20">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -69,7 +69,7 @@ const Home = () => {
             </p>
             <Button 
               onClick={() => scrollToSection('about')} 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-lg transition-all transform hover:scale-105"
+              className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-6 text-lg rounded-lg transition-all transform hover:scale-105"
             >
               Learn More
             </Button>
@@ -87,11 +87,11 @@ const Home = () => {
           </p>
           <div className="flex justify-center space-x-6">
             <a href="https://www.instagram.com/dn_consulting_group_" target="_blank" rel="noopener noreferrer" 
-               className="text-gray-600 hover:text-blue-600 transition-colors">
+               className="text-gray-600 hover:text-teal-600 transition-colors">
               <Instagram className="w-8 h-8" />
             </a>
             <a href="https://www.linkedin.com/company/dn-consultinggroup" target="_blank" rel="noopener noreferrer" 
-               className="text-gray-600 hover:text-blue-600 transition-colors">
+               className="text-gray-600 hover:text-teal-600 transition-colors">
               <Linkedin className="w-8 h-8" />
             </a>
           </div>
@@ -99,7 +99,7 @@ const Home = () => {
       </section>
 
       {/* Success Story Banner */}
-      <section className="py-12 bg-blue-600">
+      <section className="py-12 bg-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             Be the part of our Success Story
@@ -122,12 +122,10 @@ const Home = () => {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                At DN Consulting Group, our mission is to empower job seekers with the tools and support they need 
-                to succeed in securing employment in the UK. Whether you're looking for your next opportunity or aiming 
-                to elevate your professional profile, we've got you covered with our comprehensive services.
+                Our goal at UK Work Connect Group is to empower job seekers with the right guidance and support to secure opportunities in the UK, US and Dubai. As a freelance service provider, Our team offer comprehensive assistance to help you land your next role and enhance your professional profile. With 20 years of industry expertise, our team efficiently delivers high-quality hiring and staffing support tailored specifically to international job market.
               </p>
               <p className="text-gray-600 leading-relaxed mt-4">
-                Leveraging 15 years of industry experience, our professional team excels in recruitment and staffing 
+                Leveraging 20 years of industry experience, our professional team excels in recruitment and staffing 
                 tailored specifically for the UK job market.
               </p>
             </div>
@@ -264,7 +262,7 @@ const Home = () => {
                     className="w-full"
                   />
                 </div>
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6">
+                <Button type="submit" className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6">
                   Send
                 </Button>
               </form>
@@ -276,19 +274,19 @@ const Home = () => {
               </p>
               <div className="space-y-4 mb-6">
                 <a href="https://wa.me/447407832548" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center space-x-3 text-blue-600 hover:text-blue-700">
+                   className="flex items-center space-x-3 text-teal-600 hover:text-teal-700">
                   <MessageCircle className="w-6 h-6" />
                   <span>Message us on WhatsApp</span>
                 </a>
                 <div className="flex items-center space-x-3 text-gray-700">
                   <Mail className="w-6 h-6" />
-                  <a href="mailto:info@dnconsultinggroup.co.uk" className="hover:text-blue-600">
+                  <a href="mailto:info@dnconsultinggroup.co.uk" className="hover:text-teal-600">
                     info@dnconsultinggroup.co.uk
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-700">
                   <Phone className="w-6 h-6" />
-                  <a href="tel:+447407832548" className="hover:text-blue-600">
+                  <a href="tel:+447407832548" className="hover:text-teal-600">
                     +44-7407832548
                   </a>
                 </div>
@@ -304,11 +302,11 @@ const Home = () => {
               </div>
               <div className="flex space-x-4 mt-6">
                 <a href="https://www.instagram.com/dn_consulting_group_" target="_blank" rel="noopener noreferrer" 
-                   className="text-gray-600 hover:text-blue-600 transition-colors">
+                   className="text-gray-600 hover:text-teal-600 transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
                 <a href="https://www.linkedin.com/company/dn-consultinggroup" target="_blank" rel="noopener noreferrer" 
-                   className="text-gray-600 hover:text-blue-600 transition-colors">
+                   className="text-gray-600 hover:text-teal-600 transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
               </div>
