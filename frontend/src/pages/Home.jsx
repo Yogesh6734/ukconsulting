@@ -16,17 +16,49 @@ const Home = () => {
     message: ''
   });
 
+  // Get API URL from environment variable (production) or use localhost (development)
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    
+    try {
+      // Send data to backend API
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log('Response status:', response);
+      const data = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: data.message || "Thank you for contacting us. We'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        toast({
+          title: "Error",
+          description: data.detail || "Failed to send message. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   const scrollToSection = (id) => {
@@ -198,7 +230,7 @@ const Home = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            <Card className={`h-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-200 ${cardBg}`}>
+            <Card className={`h-full shadow-lg transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-200/30 focus-within:-translate-y-2 ${cardBg}`}>
               <CardContent className="p-6 space-y-4">
                 <div className="mb-2 rounded-xl overflow-hidden">
                   <img 
@@ -214,7 +246,7 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className={`h-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-200 ${cardBg}`}>
+            <Card className={`h-full shadow-lg transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-200/30 focus-within:-translate-y-2 ${cardBg}`}>
               <CardContent className="p-6 space-y-4">
                 <div className="mb-2 rounded-xl overflow-hidden">
                   <img 
@@ -230,7 +262,7 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className={`h-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-200 ${cardBg}`}>
+            <Card className={`h-full shadow-lg transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-200/30 focus-within:-translate-y-2 ${cardBg}`}>
               <CardContent className="p-6 space-y-4">
                 <div className="mb-2 rounded-xl overflow-hidden">
                   <img 
@@ -246,7 +278,7 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className={`h-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-200 ${cardBg}`}>
+            <Card className={`h-full shadow-lg transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-200/30 focus-within:-translate-y-2 ${cardBg}`}>
               <CardContent className="p-6 space-y-4">
                 <div className="mb-2 rounded-xl overflow-hidden">
                   <img 
