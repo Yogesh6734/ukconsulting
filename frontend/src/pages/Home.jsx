@@ -65,7 +65,7 @@ const Home = () => {
               Together, we can turn your<br />career goals into reality
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              We provide tailored solutions to help you meet your career goals and achieve success
+              Professional Career Guidance Services for Both Experienced and Fresh Talent in the UK.  Let us help you navigate the job market and achieve your career aspirations with confidence.
             </p>
             <Button 
               onClick={() => scrollToSection('about')} 
@@ -82,8 +82,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Expert Consulting Services</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Welcome to DN Consulting Group, your trusted source for expert consulting services throughout the UK. 
-            We provide tailored solutions to help you meet your career goals and achieve success, no matter where you are located.
+            Welcome to the UK Work Connect Group, a reliable partner for specialised consulting services across the UK. We offer customised guidance to advance your career journey and support your success, wherever you are located.
           </p>
           <div className="flex justify-center space-x-6">
             <a href="https://www.instagram.com/dn_consulting_group_" target="_blank" rel="noopener noreferrer" 
@@ -151,8 +150,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Resume Review</h3>
                 <p className="text-gray-600">
-                  In today's competitive job market, a standout resume is your key to unlocking new opportunities. 
-                  We specialize in helping job seekers like you craft resumes that not only capture attention but also leave a lasting impression.
+                  A strong CV is essential for gaining access to new chances in the cut throat job market of today.  Our speciality is assisting job searchers like you in creating resumes that not only draw attention but also make an impact.
                 </p>
               </CardContent>
             </Card>
@@ -168,8 +166,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Career Guidance</h3>
                 <p className="text-gray-600">
-                  Navigating your career path can be challenging, but with the right guidance, you can achieve your professional 
-                  goals with confidence. We offer comprehensive career guidance services designed to help you make informed decisions.
+                  In today’s competitive work market, obtaining new opportunities requires a great resume. Our area of expertise is helping job seekers like you write resumes that stand out and have an impact.
                 </p>
               </CardContent>
             </Card>
@@ -185,8 +182,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Interview Support</h3>
                 <p className="text-gray-600">
-                  Securing an interview is just the beginning. To land the job you want, you need to excel in the interview itself. 
-                  We offer comprehensive interview support services designed to help you impress potential employers.
+                  Getting an interview is only the first step. You must do well at the interview in order to get the job you want. We provide thorough interview assistance services such as interview notes that are intended to help you make an impression on prospective employers and confidently present your qualifications.
                 </p>
               </CardContent>
             </Card>
@@ -202,8 +198,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Resume Marketing</h3>
                 <p className="text-gray-600">
-                  Creating a stellar resume is only the first step in your job search. We specialize in resume marketing services 
-                  designed to connect you with potential employers and maximize your chances of landing your dream job.
+                  Making an outstanding resume is just the beginning of your job quest.  You must present your resume to the appropriate employers if you want to really stand out.  Our speciality is resume marketing services that help you get in front of companies and increase your chances of getting the job of your dreams.
                 </p>
               </CardContent>
             </Card>
@@ -273,21 +268,21 @@ const Home = () => {
                 We value our customers! Please feel free to call us during our normal business hours or send us a message or email.
               </p>
               <div className="space-y-4 mb-6">
-                <a href="https://wa.me/447407832548" target="_blank" rel="noopener noreferrer" 
+                <a href="https://wa.me/917906553784" target="_blank" rel="noopener noreferrer" 
                    className="flex items-center space-x-3 text-teal-600 hover:text-teal-700">
                   <MessageCircle className="w-6 h-6" />
                   <span>Message us on WhatsApp</span>
                 </a>
                 <div className="flex items-center space-x-3 text-gray-700">
                   <Mail className="w-6 h-6" />
-                  <a href="mailto:info@dnconsultinggroup.co.uk" className="hover:text-teal-600">
-                    info@dnconsultinggroup.co.uk
+                  <a href="mailto:ukworkconnect@gmail.com" className="hover:text-teal-600">
+                    ukworkconnect@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-700">
                   <Phone className="w-6 h-6" />
-                  <a href="tel:+447407832548" className="hover:text-teal-600">
-                    +44-7407832548
+                  <a href="tel:+917906553784" className="hover:text-teal-600">
+                    +91 7906553784
                   </a>
                 </div>
               </div>
@@ -295,8 +290,8 @@ const Home = () => {
                 <h4 className="font-bold text-gray-900 mb-4">Hours</h4>
                 <div className="space-y-2 text-gray-600">
                   <div className="flex justify-between">
-                    <span>Mon - Sun</span>
-                    <span>09:00 – 17:00</span>
+                    <span>Mon - Fri</span>
+                    <span>09:00 – 18:00</span>
                   </div>
                 </div>
               </div>
@@ -318,7 +313,7 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400">Copyright © 2025 DN Consulting Group - All Rights Reserved.</p>
+          <p className="text-gray-400">Copyright © 2025 UK Work Connect Group - All Rights Reserved.</p>
         </div>
       </footer>
     </div>
